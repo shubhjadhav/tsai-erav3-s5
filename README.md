@@ -136,3 +136,49 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - MNIST Dataset creators
 - PyTorch team
 - GitHub Actions for CI/CD support
+
+## Testing Framework
+
+The project includes comprehensive test cases to ensure model quality and performance:
+
+### 1. Parameter Count Test (`test_model_parameters`)
+- Verifies model architecture efficiency
+- Ensures total parameters stay below 25,000
+- Helps maintain model lightweight nature
+- Logs exact parameter count for monitoring
+
+### 2. Model Accuracy Test (`test_model_accuracy`)
+- Trains model for one epoch
+- Verifies accuracy exceeds 95%
+- Tests model's learning capability
+- Logs final accuracy metrics
+
+### 3. Output Shape Test (`test_model_output_shape`)
+- Validates model architecture correctness
+- Checks output dimensions (batch_size × 10 classes)
+- Ensures valid probability distributions
+- Verifies softmax properties (sum to 1)
+
+### 4. Gradient Flow Test (`test_model_gradients`)
+- Checks backpropagation functionality
+- Verifies gradients exist for all parameters
+- Ensures non-zero gradients during training
+- Tests optimization readiness
+
+### 5. Augmentation Invariance Test (`test_model_augmentation_invariance`)
+- Tests model robustness to input variations
+- Applies mild augmentations:
+  - Small rotations (±3°)
+  - Minor translations (±2%)
+  - Slight scaling (95-105%)
+- Requires 70% prediction consistency
+- Ensures model stability
+
+### Running Tests
+
+Execute all tests with detailed logging:
+```bash
+pytest tests/ -v --log-cli-level=INFO
+```
+
+Test artifacts and logs are automatically uploaded to GitHub Actions for each run.
