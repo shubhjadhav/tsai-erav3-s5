@@ -22,12 +22,4 @@ jobs:
     - name: Run tests
       run: |
         mkdir -p test_logs
-        pytest tests/ -v --log-cli-level=INFO > test_logs/pytest_output.txt 2>&1
-        
-    - name: Upload test logs
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-logs
-        path: test_logs/
-        retention-days: 90
+        pytest tests/ -v --log-cli-level=INFO
