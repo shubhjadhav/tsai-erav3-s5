@@ -116,6 +116,17 @@ The pipeline runs automatically on:
 - Learning rate: 0.05
 - Data normalization: Mean=0.1307, Std=0.3081
 
+## Data Augmentation
+The model uses the following augmentation techniques during training:
+- Random rotation (±15 degrees)
+- Random translation (up to 10% in any direction)
+- Random scaling (90% to 110% of original size)
+
+To visualize the augmentations:
+```bash
+python augmentation_demo.py
+```
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
