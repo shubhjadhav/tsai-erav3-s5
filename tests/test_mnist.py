@@ -32,7 +32,8 @@ def test_model_accuracy():
     
     try:
         metrics = train_model(return_metrics=True)
-        logger.info(f"Training completed. Metrics: {metrics}")
+        logger.info(f"Training completed.")
+        logger.info(f"Model accuracy: {metrics['final_accuracy']}%")
         
         assert metrics['final_accuracy'] > 95.0, \
             f"Model accuracy {metrics['final_accuracy']}% is below 95%"
