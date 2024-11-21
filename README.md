@@ -68,13 +68,18 @@ The pipeline runs automatically on:
 
 ```
 .
-├── mnist_model.py          # Main model implementation
+├── mnist_model.py                  # Main model implementation
+├── augmentation_demo.py            # Augmentation visualization script
+├── images/
+│   └── augmentation_examples.png   # Augmentation visualization output
 ├── tests/
-│   └── test_mnist.py       # Automated tests
+│   └── test_mnist.py               # Automated tests
 ├── .github/
-│   └── workflows/          # GitHub Actions configuration
-├── requirements.txt        # Project dependencies
-└── README.md               # Documentation
+│   └── workflows/                  # GitHub Actions configuration
+│       └── test_model.yml          # ML pipeline workflow
+├── requirements.txt                # Project dependencies
+├── .gitignore                      # Git ignore rules
+└── README.md                       # Documentation
 ```
 
 ## Model Details
