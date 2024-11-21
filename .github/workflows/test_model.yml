@@ -21,7 +21,6 @@ jobs:
         
     - name: Run tests
       run: |
-        pytest tests/ -v --log-cli-level=INFO
         pytest tests/ -v --log-cli-level=INFO --log-file=test_logs.txt
         
     - name: Upload test logs
