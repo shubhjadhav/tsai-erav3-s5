@@ -34,7 +34,7 @@ class LightMNIST(nn.Module):
         x = self.fc1(x)
         return F.log_softmax(x, dim=1)
 
-def train_model():
+def train_model(return_metrics=False):
     # Device configuration
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Using device: {device}")
@@ -84,8 +84,16 @@ def train_model():
                   f'Accuracy: {100. * correct / total:.2f}%')
             running_loss = 0.0
     
-    final_loss = loss.item()  # Get the final batch loss
-    print(f'Final Loss: {final_loss:.4f}, Final Accuracy: {100. * correct / total:.2f}%')
+    final_loss = loss.item()
+    final_accuracy = 100. * correct / total
+    print(f'Final Loss: {final_loss:.4f}, Final Accuracy: {final_accuracy:.2f}%')
+    
+    if return_metrics:
+        return {
+            'total_params': total_params,
+            'final_accuracy': final_accuracy,
+            'final_loss': final_loss
+        }
 
 if __name__ == '__main__':
     train_model() 
