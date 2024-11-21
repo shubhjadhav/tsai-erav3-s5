@@ -1,6 +1,6 @@
 # MNIST Lightweight Neural Network
 
-[![ML Pipeline](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml/badge.svg)](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml)
+[![ML Pipeline Test](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml/badge.svg?branch=main)](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml)
 
 A lightweight convolutional neural network for MNIST digit classification that achieves >95% accuracy in one epoch while maintaining less than 25,000 parameters. The project includes automated testing through GitHub Actions to ensure model efficiency and performance.
 
@@ -124,7 +124,19 @@ The model uses the following augmentation techniques during training:
 - Random translation (up to 10% in any direction)
 - Random scaling (90% to 110% of original size)
 
-To visualize the augmentations:
+### Augmentation Examples
+Below is a visualization of different augmentation techniques applied to a sample MNIST digit:
+
+![MNIST Augmentations](images/augmentation_examples.png)
+
+From left to right:
+- Original image
+- Rotation (±30°)
+- Scaling (0.8-1.2x)
+- Translation
+- Combined augmentations
+
+To generate your own augmentation visualizations:
 ```bash
 python augmentation_demo.py
 ```

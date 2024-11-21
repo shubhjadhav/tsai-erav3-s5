@@ -20,6 +20,7 @@ def show_augmented_images(original_image, augmented_images, title="Augmentation 
     
     plt.suptitle(title)
     plt.tight_layout()
+    plt.savefig('images/augmentation_examples.png', bbox_inches='tight', dpi=300)
     plt.show()
 
 def main():
