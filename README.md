@@ -1,6 +1,6 @@
 # MNIST Lightweight Neural Network
 
-[![ML Pipeline](https://github.com/shubhjadhav/mnist-lightweight/actions/workflows/test_model.yml/badge.svg)](https://github.com/shubhjadhav/mnist-lightweight/actions/workflows/test_model.yml)
+[![ML Pipeline](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml/badge.svg)](https://github.com/shubhjadhav/tsai-erav3-s5/actions/workflows/test_model.yml)
 
 A lightweight convolutional neural network for MNIST digit classification that achieves >95% accuracy in one epoch while maintaining less than 25,000 parameters. The project includes automated testing through GitHub Actions to ensure model efficiency and performance.
 
