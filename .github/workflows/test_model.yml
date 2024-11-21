@@ -3,7 +3,7 @@ name: Test MNIST Model
 on: [push, pull_request]
 
 jobs:
-  test:
+  ML-Pipeline:
     runs-on: ubuntu-latest
     
     steps:
